@@ -1,15 +1,20 @@
+
+
 const format = (time) => {
     return time.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, '$1');
 };
 
 const run = (fn, options) => {
+    const log4js = require("log4js");
+    const logger = log4js.getLogger("EXEC-TASK-ASYNC");
+
     const task = typeof fn.default === 'undefined' ? fn : fn.default;
     const start = new Date();
-    console.log(`[${format(start)}] Starting '${task.name}'...`);
+    logger.info(`Starting '${task.name}'...`);
     return task(options).then(() => {
         const end = new Date();
         const time = end.getTime() - start.getTime();
-        console.log(`[${format(end)}] Finished '${task.name}' after ${time} ms`);
+        logger.info(`Finished '${task.name}' after ${time} ms`);
     });
 };
 
