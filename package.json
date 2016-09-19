@@ -1,0 +1,33 @@
+{
+  "name": "trabajo-terminal",
+  "version": "1.0.0",
+  "description": "Pruebas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node ./tools/run build"
+  },
+  "author": "Juan Crisóstomo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "log4js": "^0.6.38"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "*",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "*",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "*",
+    "babel-runtime": "*",
+    "del": "^2.2.2",
+    "gulp-babel": "^6.1.2",
+    "gulp-file-cache": "0.0.1",
+    "gulp-nodemon": "^2.1.0",
+    "mkdirp": "^0.5.1"
+  }
+}
